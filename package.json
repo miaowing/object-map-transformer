@@ -4,7 +4,8 @@
   "description": "object <-> map",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=development nyc ava ./test && nyc report --reporter=html",
+    "report": "nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "homepage": "https://github.com/miaowing/object-map-transformer#readme",
   "dependencies": {
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "nyc": "^11.0.3"
   }
 }
